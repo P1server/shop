@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P1 Shop — FiveM Server</title>
+<style>
+
+  /* Basic setup */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background: #0d001f;
+    color: #fff;
+  }
+
+  header {
+    text-align: center;
+    padding: 30px 10px;
+    background: linear-gradient(90deg, #cc00ff, #9900ff);
+    font-size: 2em;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px #ae00ff;
+  }
+
+  /* Shop grid */
+  .shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    perspective: 1500px;
+  }
+
+  /* Cards */
+  .card {
+    width: 250px;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px solid #ffffff50;
+    border-radius: 25px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.6s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.1);
+    box-shadow: 0 0 30px #bb33ff;
+  }
+
+  .card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  .info {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .info h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2em;
+  }
+
+  .info p {
+    font-size: 1em;
+    color: #bb33ff;
+  }
+
+  .buy-btn {
+    margin-top: 10px;
+    background: #00ff4c;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 15px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .buy-btn:hover {
+    background: #48ff0098;
+  }
+
+  /* Animated background */
+  .background-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3);
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Background video -->
+<video autoplay muted loop class="background-video">
+  <source src="gta-neon.mp4" type="video/mp4">
+</video>
+
+<!-- Header -->
+<header>𝗣𝟭 𝘀𝗵𝗼𝗽</header>
+
+<!-- Shop container -->
+<div class="shop-container">
+
+  <!-- Car 1 -->
+  <div class="card">
+    <img src="car1.png" alt="Car 1">
+    <div class="info">
+      <h3>Car 1</h3>
+      <p>$1</p>
+      <button class="buy-btn" onclick="window.open('https://discord.gg/mJBdxCFn')">Buy</button>
+    </div>
+  </div>
+
+  <!-- Car 2 -->
+  <div class="card">
+    <img src="car2.png" alt="Car 2">
+    <div class="info">
+      <h3>Car 2</h3>
+      <p>$2</p>
+      <button class="buy-btn" onclick="window.open('https://discord.gg/mJBdxCFn')">Buy</button>
+    </div>
+  </div>
+
+  <!-- Car 3 -->
+  <div class="card">
+    <img src="car3.png" alt="Car 3">
+    <div class="info">
+      <h3>Car 3</h3>
+      <p>$3</p>
+      <button class="buy-btn" onclick="window.open('https://discord.gg/mJBdxCFn')">Buy</button>
+    </div>
+  </div>
+
+  <!-- Premium Car -->
+  <div class="card">
+    <img src="p1premieum.png" alt="Premium Car">
+    <div class="info">
+      <h3>Premium </h3>
+      <p>$10</p>
+      <button class="buy-btn" onclick="window.open('https://discord.gg/mJBdxCFn')">Buy</button>
+    </div>
+  </div>
+
+  <!-- Add more cards as needed -->
+</div>
+
+</body>
+</html>
